@@ -1150,7 +1150,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_TEAM = BDLHL8GNFV;
+				DEVELOPMENT_TEAM = 5N3NCY4JJT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EEChat",
@@ -1162,7 +1162,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.rentsoft.openim;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.rentsoft.openim.xs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "EEChat/EEChat-Bridging-Header.h";
@@ -1195,7 +1195,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.rentsoft.openim;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.rentsoft.openim.xs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = OpenIM;
 				SWIFT_OBJC_BRIDGING_HEADER = "EEChat/EEChat-Bridging-Header.h";
@@ -1273,7 +1273,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 0;
-				DEVELOPMENT_TEAM = BDLHL8GNFV;
+				DEVELOPMENT_TEAM = 5N3NCY4JJT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/EEChat",
@@ -1285,7 +1285,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.rentsoft.openim;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.rentsoft.openim.xs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "EEChat/EEChat-Bridging-Header.h";
