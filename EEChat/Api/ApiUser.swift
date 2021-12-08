@@ -153,35 +153,37 @@ struct ApiUserLogin: ApiType {
                     return
                 }
                 
-                var api = ApiUserLogin()
-                api.param.uid = "openIM123456"
-                api.param.secret = "tuoyun"
-                _ = api.request(showLoading: true)
-                    //.map(type: ApiUserLogin.Model.self)
-                    .subscribe(onSuccess: { model in
-//                        _ = rxRequest(showLoading: true,
-//                                      action: { OIMManager.login(uid: model.openImToken.uid,
-//                                                                 token: model.openImToken.token,
-//                                                                 callback: $0) })
-//                            .subscribe(onSuccess: { _ in
-//                                DBModule.shared.set(key: LoginVC.cacheKey, value: mnemonic)
-//                                AccountManager.shared.login(model: model)
-//                            })
-                        OpenIMiOSSDK.shared().login((model.content as! Dictionary<String, Any>)["uid"] as! String, token: (model.content as! Dictionary<String, Any>)["token"] as! String) { msg in
-                            DBModule.shared.set(key: LoginVC.cacheKey, value: mnemonic)
-                            var m = ApiUserLogin.Model()
-                            m.userInfo = UserInfo1()
-                            m.userInfo.uid = (model.content as! Dictionary<String, Any>)["uid"] as! String
-                            m.token = ToeknModel()
-                            m.token.accessToken = (model.content as! Dictionary<String, Any>)["token"] as! String
-                            DispatchQueue.main.async {
-                                AccountManager.shared.login(model: m)
-                            }
-                        } onError: { code, msg in
+//                var api = ApiUserLogin()
+//                api.param.uid = "ysUser-dev-40"
+//                api.param.secret = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVSUQiOiJ5c1VzZXItZGV2LTQwIiwiUGxhdGZvcm0iOiJJT1MiLCJleHAiOjE2NDAxODM1NDgsIm5iZiI6MTYzNzU5MTU0OCwiaWF0IjoxNjM3NTkxNTQ4fQ.mcGTJqsIyYU_QVjmce0TFx2s4Xaf_2LI067PqlX984g"
+//                _ = api.request(showLoading: true)
+//                    //.map(type: ApiUserLogin.Model.self)
+//                    .subscribe(onSuccess: { model in
+////                        _ = rxRequest(showLoading: true,
+////                                      action: { OIMManager.login(uid: model.openImToken.uid,
+////                                                                 token: model.openImToken.token,
+////                                                                 callback: $0) })
+////                            .subscribe(onSuccess: { _ in
+////                                DBModule.shared.set(key: LoginVC.cacheKey, value: mnemonic)
+////                                AccountManager.shared.login(model: model)
+////                            })
+//                        
+//
+//                    })
+                
+                OpenIMiOSSDK.shared().login("ysUser-dev-40", token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVSUQiOiJ5c1VzZXItZGV2LTQwIiwiUGxhdGZvcm0iOiJJT1MiLCJleHAiOjE2NDAxODM1NDgsIm5iZiI6MTYzNzU5MTU0OCwiaWF0IjoxNjM3NTkxNTQ4fQ.mcGTJqsIyYU_QVjmce0TFx2s4Xaf_2LI067PqlX984g") { msg in
+                    DBModule.shared.set(key: LoginVC.cacheKey, value: mnemonic)
+                    var m = ApiUserLogin.Model()
+                    m.userInfo = UserInfo1()
+                    m.userInfo.uid = "ysUser-dev-40"
+                    m.token = ToeknModel()
+                    m.token.accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVSUQiOiJ5c1VzZXItZGV2LTQwIiwiUGxhdGZvcm0iOiJJT1MiLCJleHAiOjE2NDAxODM1NDgsIm5iZiI6MTYzNzU5MTU0OCwiaWF0IjoxNjM3NTkxNTQ4fQ.mcGTJqsIyYU_QVjmce0TFx2s4Xaf_2LI067PqlX984g"
+                    DispatchQueue.main.async {
+                        AccountManager.shared.login(model: m)
+                    }
+                } onError: { code, msg in
 
-                        }
-
-                    })
+                }
             }
         }
     }

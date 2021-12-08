@@ -15,7 +15,7 @@ public struct ApiInfo: ApiTarget {
         self.path = path
     }
     
-    public let baseURL: URL = URL(string: "http://47.112.160.66:10000/")!
+    public let baseURL: URL = URL(string: "http://47.115.43.6:10000/")!
     
     public let path: String
     
